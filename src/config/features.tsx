@@ -15,27 +15,13 @@ import { useMemeFeature } from './example/MemeFeature';
 const { T } = createI18n(provider, {
   en: {
     music: 'Music Player',
-    'music description': 'Play music in your Discord Server',
+    'music description': 'Play music in Your Discord Server',
     gaming: 'Gaming',
     'gaming description': 'Enjoy playing games with your friends',
     'reaction role': 'Reaction Role',
     'reaction role description': 'Give user a role when clicking on a button',
     memes: 'Memes Time',
-    'memes description': 'Send memes every day',
-    'welcome message': 'Welcome Message',
-    'welcome message description': 'Send a message when a user joins the server',
-  },
-  vi: {
-    music: 'Trình phát nhạc',
-    'music description': 'Phát nhạc trong máy chủ Discord của bạn',
-    gaming: 'Chơi game',
-    'gaming description': 'Cùng bạn bè tận hưởng trò chơi',
-    'reaction role': 'Phản ứng để nhận vai trò',
-    'reaction role description': 'Gán vai trò cho người dùng khi bấm nút',
-    memes: 'Giờ vui với Meme',
-    'memes description': 'Gửi meme mỗi ngày',
-    'welcome message': 'Tin nhắn chào mừng',
-    'welcome message description': 'Gửi tin nhắn khi người dùng tham gia máy chủ',
+    'memes description': 'Send memes everyday',
   },
   cn: {
     music: '音樂播放器',
@@ -46,13 +32,13 @@ const { T } = createI18n(provider, {
     'reaction role description': '單擊按鈕時為用戶賦予角色',
     memes: '模因時間',
     'memes description': '每天發送模因',
-    'welcome message': '歡迎信息',
-    'welcome message description': '當用戶加入服務器時發送消息',
   },
 });
 
 /**
  * Define information for each features
+ *
+ * There is an example:
  */
 export const features: FeaturesConfig = {
   music: {
@@ -67,8 +53,8 @@ export const features: FeaturesConfig = {
     },
   },
   'welcome-message': {
-    name: <T text="welcome message" />,
-    description: <T text="welcome message description" />,
+    name: 'Welcome Message',
+    description: 'Send message when user joined the server',
     icon: <Icon as={MdMessage} />,
     useRender: useWelcomeMessageFeature,
   },
